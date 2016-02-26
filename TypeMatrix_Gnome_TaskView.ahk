@@ -14,9 +14,11 @@
 ; want to turn this functionality temporarily off during games.
 
 ; Uncomment to Hide AutoHotKey Tray Icon
-#NoTrayIcon
+;#NoTrayIcon
 
 #Persistent
+#InstallKeybdHook
+
 SetTimer, HotCorners, 0
 return
 
@@ -43,10 +45,19 @@ if CornerTopLeft
 
 return
 
+LWin::
+Send, {LWin down}
+
+return
+
 LWin Up::
-Send, {LWin down}{tab down}
-Send, {LWin up}{tab up}
-Sleep, 100
+if !(A_PriorKey = "LWin") {
+	Send, {LWin up}
+}
+if (A_PriorKey = "LWin") {
+	Send, {LWin down}{tab down}
+	Send, {LWin up}{tab up}
+}
 return
 
 ; Uncomment to activate:
