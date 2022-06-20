@@ -1,5 +1,6 @@
 # TypeMatrix_GNOME_TaskView
-AutoHotKey scripts for making Windows 10 behave a little more efficiently, GNOME style.
+AutoHotKey scripts for making Windows 10 behave a little more efficiently, GNOME style. Also, 
+script(s) to add a little convenience that could apply to any desktop/work environment.
 
 Mouse to TopLeft, or the left Win key, starts Task View.  With moving the Taskbar to the top of
 the screen, this essencially makes the system mimic Gnome's Win-key behavior and appearance.
